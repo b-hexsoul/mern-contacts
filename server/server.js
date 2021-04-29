@@ -7,7 +7,7 @@ const app = express();
 app.use(helmet());
 app.use(morgan("tiny"));
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 // API Routes
 const apiRoutes = require("./routes/index");
