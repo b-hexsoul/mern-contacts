@@ -3,6 +3,7 @@ import {
   SET_CURRENT,
   CLEAR_CURRENT,
   DELETE_CONTACT,
+  UPDATE_CONTACT,
 } from "../types";
 
 const reducer = (state, action) => {
@@ -18,6 +19,13 @@ const reducer = (state, action) => {
         contacts: state.contacts.filter(
           (contact) => contact.id !== action.payload
         ),
+      };
+    case UPDATE_CONTACT:
+      return {
+        ...state,
+        contacts: state.contacts.map((contact) => {
+          return contact.id === action.payload.id ? action.payload : contact;
+        }),
       };
     case SET_CURRENT:
       return {

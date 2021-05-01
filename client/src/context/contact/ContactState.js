@@ -57,6 +57,9 @@ const ContactState = ({ children }) => {
   };
 
   // Update Contact
+  const updateContact = (contact) => {
+    dispatch({ type: UPDATE_CONTACT, payload: contact });
+  };
   // Filter Contacts
   // Clear Filter
 
@@ -69,6 +72,7 @@ const ContactState = ({ children }) => {
         deleteContact,
         setCurrent,
         clearCurrent,
+        updateContact,
       }}
     >
       {children}
