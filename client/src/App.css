@@ -2,7 +2,8 @@
 
 /* Global Styles */
 :root {
-  --primary-color: #003699;
+  --primary-color: #55198B;
+  --dark-mode: #171C28;
   --dark-color: #333333;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -94,6 +95,7 @@ img {
 .card {
   padding: 1rem;
   border: #ccc 1px dotted;
+  border-radius: 8px;
   margin: 0.7rem 0;
 }
 
@@ -315,11 +317,13 @@ textarea {
   padding: 0.4rem;
   font-size: 1.2rem;
   border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
 input[type="submit"],
 button {
   font: inherit;
+  border-radius: 8px;
 }
 
 .form-group {
@@ -439,4 +443,19 @@ table th {
     text-align: center;
     justify-content: center;
   }
+}
+
+.contact-item-enter {
+  opacity: 0;
+}
+.contact-item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.contact-item-exit {
+  opacity: 1;
+}
+.contact-item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
 }
