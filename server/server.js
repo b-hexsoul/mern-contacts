@@ -6,6 +6,7 @@ const app = express();
 
 app.use(helmet());
 app.use(morgan("tiny"));
+app.use(express.json({ extended: false }));
 
 const PORT = process.env.PORT || 5000;
 
